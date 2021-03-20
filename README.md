@@ -18,4 +18,6 @@ RnUtils.AddPinnedShortcut({
   label: '测试',
   link: 'hongtangyun://platformapi/startapp?appId=test',
 })
+
+RnUtils.exitApp()
 ```
