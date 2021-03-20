@@ -18,6 +18,11 @@ RCT_EXPORT_METHOD(exitApp)
     exit(0);
 };
 
+- (void)loadBundle
+{
+    RCTTriggerReloadCommandListeners(@"react-native-utils: restart");
+}
+
 RCT_EXPORT_METHOD(restart) {
     if ([NSThread isMainThread]) {
         [self loadBundle];
