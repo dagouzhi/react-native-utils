@@ -1,0 +1,45 @@
+{
+  "name": "@hongtangyun/react-native-utils",
+  "title": "React Native Shortcuts",
+  "version": "0.0.1",
+  "description": "TODO",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "README.md",
+    "android",
+    "dist/**/*.{ts,js,png}",
+    "ios",
+    "react-native-shortcuts.podspec"
+  ],
+  "scripts": {
+    "lint": "tslint -p ./ -c ./tslint.json",
+    "tsc:src": "rm -rf dist && tsc -p ./src && rsync -rv --exclude=*.ts --exclude=*.tsx src/ dist/",
+    "prepublishOnly": "npm run tsc:src",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/github_account/react-native-utils.git",
+    "baseUrl": "https://github.com/github_account/react-native-utils"
+  },
+  "keywords": [
+    "react-native"
+  ],
+  "author": {
+    "name": "Your Name",
+    "email": "yourname@email.com"
+  },
+  "license": "MIT",
+  "licenseFilename": "LICENSE",
+  "readmeFilename": "README.md",
+  "peerDependencies": {
+    "react": "^16.8.1",
+    "@types/react-native": "^0.63.51",
+    "react-native": ">=0.60.0-rc.0 <1.0.x"
+  },
+  "devDependencies": {
+    "react": "^16.9.0",
+    "react-native": "^0.64.0"
+  }
+}
