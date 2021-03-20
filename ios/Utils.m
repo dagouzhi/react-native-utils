@@ -18,7 +18,7 @@ RCT_EXPORT_METHOD(exitApp)
     exit(0);
 };
 
-RCT_EXPORT_METHOD(Restart) {
+RCT_EXPORT_METHOD(restart) {
     if ([NSThread isMainThread]) {
         [self loadBundle];
     } else {

@@ -37,6 +37,12 @@ class UtilsClass {
     exitApp() {
         Utils?.exitApp();
     }
+    /**
+     * 重启
+     */
+    restart() {
+        Utils?.restart();
+    }
 }
 export default new UtilsClass();
 //# sourceMappingURL=index.js.map

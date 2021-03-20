@@ -15,6 +15,10 @@ declare class UtilsClass {
      * 关闭app
      */
     exitApp(): void;
+    /**
+     * 重启
+     */
+    restart(): void;
 }
 declare const _default: UtilsClass;
 export default _default;
