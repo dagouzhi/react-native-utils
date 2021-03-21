@@ -19,6 +19,11 @@ declare class UtilsClass {
      * 重启
      */
     restart(): void;
+    /**
+     * 设置屏幕常亮
+     * @param disabled true: 启用 false: 不启用
+     */
+    setIdleTimerDisabled(disabled: boolean): void;
 }
 declare const _default: UtilsClass;
 export default _default;

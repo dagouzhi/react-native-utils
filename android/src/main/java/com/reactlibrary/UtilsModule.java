@@ -2,6 +2,8 @@
 
 package com.reactlibrary;
 
+import android.view.WindowManager;
+
 import android.app.Application;
 import android.os.Process;
 
@@ -116,6 +118,23 @@ public class UtilsModule extends ReactContextBaseJavaModule {
         if (mLifecycleEventListener != null) {
             getReactApplicationContext().removeLifecycleEventListener(mLifecycleEventListener);
             mLifecycleEventListener = null;
+        }
+    }
+
+    @ReactMethod
+    public void setIdleTimerDisabled(final boolean disabled) {
+        final Activity activity = this.getCurrentActivity();
+        if (activity != null) {
+            activity.runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    if (disabled) {
+                        activity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+                    } else {
+                        activity.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+                    }
+                }
+            });
         }
     }
 

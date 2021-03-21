@@ -26,7 +26,7 @@ class UtilsClass {
       try {
         const os = Platform.OS;
         if (os === 'android') {
-          Utils.AddPinnedShortcut(query, (status: boolean) => {
+          Utils?.AddPinnedShortcut(query, (status: boolean) => {
             resolve(status);
           })
         }
@@ -57,6 +57,13 @@ class UtilsClass {
    */
   restart() {
     Utils?.restart();
+  }
+  /**
+   * 设置屏幕常亮
+   * @param disabled true: 启用 false: 不启用
+   */
+  setIdleTimerDisabled(disabled: boolean) {
+    Utils?.setIdleTimerDisabled(disabled);
   }
 }
 

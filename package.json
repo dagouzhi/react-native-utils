@@ -1,7 +1,7 @@
 {
   "name": "@hongtangyun/react-native-utils",
   "title": "React Native utils",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "TODO",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -40,6 +40,6 @@
   },
   "devDependencies": {},
   "dependencies": {
-    
+    "react-native": "^0.64.0"
   }
 }

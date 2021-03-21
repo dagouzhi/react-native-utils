@@ -22,4 +22,6 @@ RnUtils.AddPinnedShortcut({
 RnUtils.exitApp()
 // 刷新重启
 RnUtils.restart()
+// 屏幕常亮
+RnUtils.setIdleTimerDisabled(true);
 ```

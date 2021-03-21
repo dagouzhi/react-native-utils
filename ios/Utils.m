@@ -13,6 +13,12 @@ RCT_EXPORT_METHOD(sampleMethod:(NSString *)stringArgument numberParameter:(nonnu
     callback(@[[NSString stringWithFormat: @"numberArgument: %@ stringArgument: %@", numberArgument, stringArgument]]);
 }
 
+RCT_EXPORT_METHOD(setIdleTimerDisabled:(BOOL)disabled) {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [UIApplication sharedApplication].idleTimerDisabled = disabled;
+    });
+}
+
 RCT_EXPORT_METHOD(exitApp)
 {
     exit(0);
