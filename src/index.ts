@@ -1,6 +1,6 @@
 import { NativeModules, Platform, Linking } from 'react-native';
 
-const { Utils } = NativeModules;
+const { HtyUtils } = NativeModules;
 
 export interface PinnedShortcutConfig {
   id: string;
@@ -26,7 +26,7 @@ class UtilsClass {
       try {
         const os = Platform.OS;
         if (os === 'android') {
-          Utils?.AddPinnedShortcut(query, (status: boolean) => {
+          HtyUtils?.AddPinnedShortcut(query, (status: boolean) => {
             resolve(status);
           })
         }
@@ -50,20 +50,20 @@ class UtilsClass {
    * 关闭app
    */
   exitApp() {
-    Utils?.exitApp();
+    HtyUtils?.exitApp();
   }
   /**
    * 重启
    */
   restart() {
-    Utils?.restart();
+    HtyUtils?.restart();
   }
   /**
    * 设置屏幕常亮
    * @param disabled true: 启用 false: 不启用
    */
   setIdleTimerDisabled(disabled: boolean) {
-    Utils?.setIdleTimerDisabled(disabled);
+    HtyUtils?.setIdleTimerDisabled(disabled);
   }
 }
 

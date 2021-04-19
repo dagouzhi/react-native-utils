@@ -36,7 +36,7 @@ import com.facebook.react.ReactApplication;
 import com.facebook.react.ReactInstanceManager;
 import com.facebook.react.bridge.LifecycleEventListener;
 
-public class UtilsModule extends ReactContextBaseJavaModule {
+public class HtyUtilsPackage extends ReactContextBaseJavaModule {
 
     private final ReactApplicationContext reactContext;
 

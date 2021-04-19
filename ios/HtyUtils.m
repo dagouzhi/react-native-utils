@@ -1,9 +1,9 @@
-// Utils.m
+// HtyUtils.m
 
-#import "Utils.h"
+#import "HtyUtils.h"
 
 
-@implementation Utils
+@implementation HtyUtils
 
 RCT_EXPORT_MODULE()
 

@@ -1,46 +1,40 @@
 {
   "name": "@hongtangyun/react-native-utils",
-  "title": "React Native utils",
-  "version": "0.0.5",
+  "title": "React Native Hty Utils",
+  "version": "1.0.0",
   "description": "TODO",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "index.js",
   "files": [
     "README.md",
     "android",
-    "dist/**/*.{ts,js,png}",
+    "index.js",
     "ios",
-    "react-native-utils.podspec"
+    "react-native-hty-utils.podspec"
   ],
   "scripts": {
-    "lint": "tslint -p ./ -c ./tslint.json",
-    "tsc:src": "rm -rf dist && tsc -p ./src && rsync -rv --exclude=*.ts --exclude=*.tsx src/ dist/",
-    "prepublishOnly": "npm run tsc:src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dagouzhi/react-native-utils.git",
-    "baseUrl": "https://github.com/dagouzhi/react-native-utils"
+    "url": "git+https://github.com/github_account/react-native-utils.git",
+    "baseUrl": "https://github.com/github_account/react-native-utils"
   },
   "keywords": [
     "react-native"
   ],
   "author": {
-    "name": "dagouzhi",
-    "email": "dagouzhi@qq.com"
+    "name": "Your Name",
+    "email": "yourname@email.com"
   },
   "license": "MIT",
   "licenseFilename": "LICENSE",
   "readmeFilename": "README.md",
   "peerDependencies": {
-    "@types/react-native": "^0.64.0",
-    "react": "^16.8.1",
+    "react": ">=16.8.1",
     "react-native": ">=0.60.0-rc.0 <1.0.x"
   },
   "devDependencies": {
-    "@types/react-native": "^0.64.0",
-    "react-native": "^0.64.0"
-  },
-  "dependencies": {}
+    "react": "^16.9.0",
+    "react-native": "^0.61.5"
+  }
 }
