@@ -1,4 +1,4 @@
-import { NativeModules, Platform, Linking } from 'react-native';
+import { NativeModules, Platform, Linking, BackHandler } from 'react-native';
 
 const { HtyUtils } = NativeModules;
 
@@ -50,7 +50,12 @@ class UtilsClass {
    * 关闭app
    */
   exitApp() {
-    HtyUtils?.exitApp();
+    const os = Platform.OS;
+    if (os === 'android') {
+        BackHandler.exitApp();
+    } else {
+        HtyUtils?.exitApp();
+    }
   }
   /**
    * 重启
